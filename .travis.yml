@@ -16,5 +16,5 @@ before_script:
   - npm start > /dev/null &
   - wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
   - unzip BrowserStackLocal-linux-x64.zip
-  - ./BrowserStackLocal $BROWSERSTACK_KEY localhost,3000,0 > /dev/null &
+  - ./BrowserStackLocal $BS_AUTHKEY localhost,3000,0 > /dev/null &
   - sleep 10
