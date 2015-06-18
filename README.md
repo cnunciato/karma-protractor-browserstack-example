@@ -1,5 +1,7 @@
 # karma-protractor-browserstack-example
 
+[![Build Status](https://travis-ci.org/cnunciato/karma-protractor-browserstack-example.svg?branch=master)](https://travis-ci.org/cnunciato/karma-protractor-browserstack-example)
+
 This is a bare-bones [Express](http://expressjs.com/) app ([generated](http://expressjs.com/starter/generator.html)) 
 set up as an example integration of [Karma](http://karma-runner.github.io/0.12/index.html), 
 [Jasmine](http://jasmine.github.io/), [Protractor](https://angular.github.io/protractor)
