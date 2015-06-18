@@ -16,11 +16,7 @@ module.exports = function(config) {
     browsers: [
       'Chrome'
     ],
-
-    browserify: {
-      debug: true
-    },
-
+    
     singleRun: false
   });
 };
