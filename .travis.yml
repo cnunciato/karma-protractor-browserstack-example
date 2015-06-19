@@ -15,8 +15,8 @@ env:
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  - npm start > /dev/null &
-  - wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
-  - unzip BrowserStackLocal-linux-x64.zip
-  - ./BrowserStackLocal $BS_AUTHKEY localhost,3000,0 > /dev/null &
-  - sleep 10
+  #- npm start > /dev/null &
+  #- wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
+  #- unzip BrowserStackLocal-linux-x64.zip
+  #- ./BrowserStackLocal $BS_AUTHKEY localhost,3000,0 > /dev/null &
+  #- sleep 10
