@@ -1,4 +1,4 @@
-# karma-protractor-browserstack-example
+# karma-protractor-travis-browserstack
 
 [![Build Status](https://travis-ci.org/cnunciato/karma-protractor-browserstack-example.svg?branch=master)](https://travis-ci.org/cnunciato/karma-protractor-browserstack-example)
 
