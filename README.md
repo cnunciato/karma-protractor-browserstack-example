@@ -4,7 +4,8 @@
 
 This is a bare-bones [Express](http://expressjs.com/) app ([generated](http://expressjs.com/starter/generator.html)) 
 set up as an example integration of [Karma](http://karma-runner.github.io/0.12/index.html), 
-[Jasmine](http://jasmine.github.io/), [Protractor](https://angular.github.io/protractor)
+[Jasmine](http://jasmine.github.io/), [Protractor](https://angular.github.io/protractor),
+[Travis CI](https://travis-ci.org) and
 and [BrowserStack](http://browserstack.com) to run both unit and acceptance/end-to-end 
 tests. (It's intended as a general-purpose example, so it doesn't include Angular.) 
 
