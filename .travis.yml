@@ -4,9 +4,9 @@ cache:
     - node_modules
 addons:
   browserstack:
-    username: "Your BrowserStack username"
+    username: BS_USERNAME
     access_key:
-      secure: "The secure string output of `travis encrypt`"
+      secure: BS_AUTHKEY
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
