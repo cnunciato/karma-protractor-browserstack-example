@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "karma start karma.conf.js --single-run && protractor protractor.conf.js"
+    "test": "protractor protractor.conf.js"
   },
   "dependencies": {
     "body-parser": "~1.12.4",
