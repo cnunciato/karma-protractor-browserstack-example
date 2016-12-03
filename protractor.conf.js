@@ -26,6 +26,8 @@ var multis = [
 ];
 
 console.log(process.env.BS_USERNAME);
+console.log(process.env.BS_DEBUG);
+console.log(process.env.OTHERTHING);
 
 exports.config = {
 
