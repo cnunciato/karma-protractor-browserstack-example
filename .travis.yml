@@ -4,9 +4,9 @@ cache:
     - node_modules
 addons:
   browserstack:
-    username: ${BS_USERNAME}
+    username: echo $BS_USERNAME
     access_key:
-      secure: ${BS_AUTHKEY}
+      secure: echo $BS_AUTHKEY
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
