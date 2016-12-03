@@ -1,27 +1,27 @@
 language: node_js
 cache:
   directories:
-    - node_modules
+  - node_modules
 addons:
   browserstack:
-    username: echo $BS_USERNAME
+    username: paigesaunders2
     access_key:
-      secure: echo $BS_AUTHKEY
+      secure: "bV0CX9b+nt07BvxZWWk27XESxMglEp14Zedg34IhFthB06RgLjqNSBJdK3ZWIatKsKIfPOFDDgpw7fsnIIB9EOsS0xJVRZAWnxvqibRXRVYO465x2orRduLc2jU3x4vYLTArb5pYEpvPraTM70OuqQe0iGLuoK+H9ihRz8LTT8YdlyrY9PVuf+vQXVNA5E44JGaobI4EtHxcmPobDDu5mNmdVPql+WVFp9jVsFqXs48ooZC2MACLQqC8ASbEKbriLtWu9xlJ+yh6QhvE9YavNfOjTzvAj0rSU1ZzRQtoxSJco+qadiZEhcQj5+i+pnOoOUgL6SNKp0CcsMK+Ub+4eHBEywv4uGE+ci24Fk88rIy2qQUGaQvpxiQawRsadtWWs+GyqWOZHcn9FxkD8uvhPdlVhrSHKO1zzSzbnW5Y0hoLfCJ2PNWqjTzEFX5pBkC4DA+A++2gXQ7WC1a56SgpV26YSMfa8ZhC2PQnF3/pvXahpdJL0tfaTF/tYHfwrWVyEISDC2XeP1QFKOarbGA9uRg9GD4B9nhjcd4w45RAWV4iVlv5nCI8xuUBh68mDAQcvfwwAduPTBU6V6+NGxqw6YBVsj92zss+rqSJ0dnGcddwjh6vjcUG6mdlDIfxmevAiohg7EeQ7oo5oM71gjuqZSItG5TfEN4jfeNNNOanYMI="
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - npm start > /dev/null &
-  - wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
-  - unzip BrowserStackLocal-linux-x64.zip
-  - ./BrowserStackLocal $BS_AUTHKEY localhost,3000,0 > /dev/null &
-  - sleep 10
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- npm start > /dev/null &
+- wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
+- unzip BrowserStackLocal-linux-x64.zip
+- "./BrowserStackLocal $BS_AUTHKEY localhost,3000,0 > /dev/null &"
+- sleep 10
 env:
   global:
-    - SELENIUM_HOST=hub.browserstack.com
-    - SELENIUM_PORT=80
-    - BS_AUTOMATE_PROJECT="$TRAVIS_REPO_SLUG"
-    - BS_AUTOMATE_BUILD="Travis build No. $TRAVIS_BUILD_NUMBER for $TRAVIS_REPO_SLUG"
-    - BS_DEBUG=true
-    - BS_LOCAL=true
-    - secure: "fN6p/WcosYW5ykdvWlSpigL3zBrd+ZZU2QCSUaaraDffmfWVTeAh6MD2VjlYFa8hFSQOMEfFcx7zd2C6XRHROSKtVuxeQjXqPXYbyy9/R+IKhc0l+hW3of83siXOENspPMNfIX2Lj0K/0Tnlp0fRCG6ElogQBbDbi1xApmyy49UKhSY3bIwWP2doYCSSy3XqCB2XOgvb0ilU1qdGlPmdH+MDqNLgQZnkV688rWStgJ+BmmO4RuoeZADZEUcKGjdfGVOHRRVWn21aJC6nh6g90BoYYpNznXL+oUrxamuZH6nCwwxaCp6d15ZEyFxgnLg21ucrZGi+nq8pwlD7+7UH+oa1udDaSSvMsvSk32SIAVrKa45lyra869Asm9VH/lRXM1YqWx+gygmnYcH9h2qgOQup5ZsCV1iRffngTpF7Qjt5BZ+sBSeAof8HQCOVoEjFw73TMDkj74nFhfJjhvRGy8eu5DX7C/q8gq2XOxuLWh8RHpoXdr0PA8J35EUJSfxzvLVF6sRSrcPtUqA+wEeHykjHkk14hBLF+lo9gb/sDlEiojlplGXDtLcIbn3oviQUjcFZ6V59mWMqdsO0T2UtTU1y2vDTWoW5FPrFNn1zU6znW1CP7RVmbzhUnrkexLlFtrdo/weY6qX7IupVVmuk0GjQVA6pVmupGnrra6RKViA="
-    - secure: "NsPGnuCHd+6LG4xtBqKmX7RpnKqWgzTK6+uRb1lgvM275tYWqFZQfZVRwhV4tCKWK71TY/7tk7iN7DvJpfMoAa3S96SS1mKmhLfLNrzGzPP75FCIuaKpejzWvJA4VNzQmqlZkvasXe7XR/4SMf6IKV/0rUamzxTel3m/Cm0+DYzQnnC6jn2UCln3ijYQno3/I+tXg/LOe1ez/yPKFFqr4R42qw7Vz7YXcvLQTqzFvZcwoGLO3TdrWKvfsem5/nO9eJBN1o6npOSv9qivJjDSrP1x0ZR6Gy7TFCIwchZff43Sjabt/BfOS9KSXfYxXVN1UnObRosCbHIENUkNwGM6InyFmCYNUYp8bQsvrwV4QJTK2Mp8Bn4+l8fPiBA6rp0XiTxdMO3MrkhWpC0Y+RoZoehWZzVtPfshEHEN2uvLEkkZmQaB/KHrztllv/1IDfIySqYU0I+xpvm+s28jzhKYIWGXPUKBqub9nUdsvUQadJo2Mxkmb7zlw+Rx7lVjiy9b86cITBArqXmJOBu4yyvZfZ8tE/OIzFaq2NLa3/L2nP92Ic95djqy72jejJrxDI7tF7aCvbfwujfJIxprmcUZEF2JB8wSM6lQRIB5eqqfH+IduLVMWfnawJTdGEUWN80UiTRq9cUfRqX7JwWFQdUXkbSmpKrqqo5IJxsHr98bjC8="
+  - SELENIUM_HOST=hub.browserstack.com
+  - SELENIUM_PORT=80
+  - BS_AUTOMATE_PROJECT="$TRAVIS_REPO_SLUG"
+  - BS_AUTOMATE_BUILD="Travis build No. $TRAVIS_BUILD_NUMBER for $TRAVIS_REPO_SLUG"
+  - BS_DEBUG=true
+  - BS_LOCAL=true
+  - secure: fN6p/WcosYW5ykdvWlSpigL3zBrd+ZZU2QCSUaaraDffmfWVTeAh6MD2VjlYFa8hFSQOMEfFcx7zd2C6XRHROSKtVuxeQjXqPXYbyy9/R+IKhc0l+hW3of83siXOENspPMNfIX2Lj0K/0Tnlp0fRCG6ElogQBbDbi1xApmyy49UKhSY3bIwWP2doYCSSy3XqCB2XOgvb0ilU1qdGlPmdH+MDqNLgQZnkV688rWStgJ+BmmO4RuoeZADZEUcKGjdfGVOHRRVWn21aJC6nh6g90BoYYpNznXL+oUrxamuZH6nCwwxaCp6d15ZEyFxgnLg21ucrZGi+nq8pwlD7+7UH+oa1udDaSSvMsvSk32SIAVrKa45lyra869Asm9VH/lRXM1YqWx+gygmnYcH9h2qgOQup5ZsCV1iRffngTpF7Qjt5BZ+sBSeAof8HQCOVoEjFw73TMDkj74nFhfJjhvRGy8eu5DX7C/q8gq2XOxuLWh8RHpoXdr0PA8J35EUJSfxzvLVF6sRSrcPtUqA+wEeHykjHkk14hBLF+lo9gb/sDlEiojlplGXDtLcIbn3oviQUjcFZ6V59mWMqdsO0T2UtTU1y2vDTWoW5FPrFNn1zU6znW1CP7RVmbzhUnrkexLlFtrdo/weY6qX7IupVVmuk0GjQVA6pVmupGnrra6RKViA=
+  - secure: NsPGnuCHd+6LG4xtBqKmX7RpnKqWgzTK6+uRb1lgvM275tYWqFZQfZVRwhV4tCKWK71TY/7tk7iN7DvJpfMoAa3S96SS1mKmhLfLNrzGzPP75FCIuaKpejzWvJA4VNzQmqlZkvasXe7XR/4SMf6IKV/0rUamzxTel3m/Cm0+DYzQnnC6jn2UCln3ijYQno3/I+tXg/LOe1ez/yPKFFqr4R42qw7Vz7YXcvLQTqzFvZcwoGLO3TdrWKvfsem5/nO9eJBN1o6npOSv9qivJjDSrP1x0ZR6Gy7TFCIwchZff43Sjabt/BfOS9KSXfYxXVN1UnObRosCbHIENUkNwGM6InyFmCYNUYp8bQsvrwV4QJTK2Mp8Bn4+l8fPiBA6rp0XiTxdMO3MrkhWpC0Y+RoZoehWZzVtPfshEHEN2uvLEkkZmQaB/KHrztllv/1IDfIySqYU0I+xpvm+s28jzhKYIWGXPUKBqub9nUdsvUQadJo2Mxkmb7zlw+Rx7lVjiy9b86cITBArqXmJOBu4yyvZfZ8tE/OIzFaq2NLa3/L2nP92Ic95djqy72jejJrxDI7tF7aCvbfwujfJIxprmcUZEF2JB8wSM6lQRIB5eqqfH+IduLVMWfnawJTdGEUWN80UiTRq9cUfRqX7JwWFQdUXkbSmpKrqqo5IJxsHr98bjC8=
