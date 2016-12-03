@@ -2,10 +2,6 @@ language: node_js
 cache:
   directories:
     - node_modules
-addons:
-  browserstack:
-    username: "paigesaunders2"
-    secure: "gHPEozq96Fqw/QTrSDAuP6Uvo9HXldJBcLttzzLYnNbYZ/SJndFF2gV8Kzw422WrXosvKU6j0ZxSEFX5AdkwR55UgimDnHw8HbTBWpRQAD0yG8q2ZKxNafa6eUGpS4zibN7Vy+cTLJlNd/qY02QnNAnodAif8ITyQTf0A+KiMDYno0cbpZsPsO7tZBHLSlYEgAgwaBJnjiuW1DU6IMhvxe4uDubQA5qzwLs2KVE2pL0NxbQcRJMQQSB7xHnoS2sxPstgOqbe9/1X76Oj+M+L0z28wCj9eNrrcclMra+DCIivl6Pqx5IkueEFnjPcDPsakBgZgU6gqBKBjZRqew5SE/sGQy1IDmCXDRDZQ0Qf7qtQ/RJPsyORzIS22iXgxZjHESzLPugIPXgbGHEYDRTm6I7DcAdQYEuBIySEPcuLPd5Vhe34vs3T2NyGq2Io/BL75t+JO4Vz6XZkTq406YUT2vZ51Eeq196eHqZGR4coCP/LoEQs84QqsRoFJj07mh6VOc6WgaNG4EzQIx6jCmrVAAMiBvk2has/qWN0yORezmJsj4cyUHh+MLPGKq4xzM3wbZq1Sn5GN5IBf+l3JqaXWgQEtWvcePoeWuaqtolo74d0nW/2tEdQhE7aw1taJGfmtdldvecvSNqImt7RfWKSI0OlCj8SOTcS2Vo160cY+Tw="
 env:
   global:
     - SELENIUM_HOST=hub.browserstack.com
@@ -14,6 +10,9 @@ env:
     - BS_AUTOMATE_BUILD="Travis build No. $TRAVIS_BUILD_NUMBER for $TRAVIS_REPO_SLUG"
     - BS_DEBUG=true
     - BS_LOCAL=true
+    - OTHERTHING="TWADDLY"
+    - secure: "fN6p/WcosYW5ykdvWlSpigL3zBrd+ZZU2QCSUaaraDffmfWVTeAh6MD2VjlYFa8hFSQOMEfFcx7zd2C6XRHROSKtVuxeQjXqPXYbyy9/R+IKhc0l+hW3of83siXOENspPMNfIX2Lj0K/0Tnlp0fRCG6ElogQBbDbi1xApmyy49UKhSY3bIwWP2doYCSSy3XqCB2XOgvb0ilU1qdGlPmdH+MDqNLgQZnkV688rWStgJ+BmmO4RuoeZADZEUcKGjdfGVOHRRVWn21aJC6nh6g90BoYYpNznXL+oUrxamuZH6nCwwxaCp6d15ZEyFxgnLg21ucrZGi+nq8pwlD7+7UH+oa1udDaSSvMsvSk32SIAVrKa45lyra869Asm9VH/lRXM1YqWx+gygmnYcH9h2qgOQup5ZsCV1iRffngTpF7Qjt5BZ+sBSeAof8HQCOVoEjFw73TMDkj74nFhfJjhvRGy8eu5DX7C/q8gq2XOxuLWh8RHpoXdr0PA8J35EUJSfxzvLVF6sRSrcPtUqA+wEeHykjHkk14hBLF+lo9gb/sDlEiojlplGXDtLcIbn3oviQUjcFZ6V59mWMqdsO0T2UtTU1y2vDTWoW5FPrFNn1zU6znW1CP7RVmbzhUnrkexLlFtrdo/weY6qX7IupVVmuk0GjQVA6pVmupGnrra6RKViA="
+    - secure: "NsPGnuCHd+6LG4xtBqKmX7RpnKqWgzTK6+uRb1lgvM275tYWqFZQfZVRwhV4tCKWK71TY/7tk7iN7DvJpfMoAa3S96SS1mKmhLfLNrzGzPP75FCIuaKpejzWvJA4VNzQmqlZkvasXe7XR/4SMf6IKV/0rUamzxTel3m/Cm0+DYzQnnC6jn2UCln3ijYQno3/I+tXg/LOe1ez/yPKFFqr4R42qw7Vz7YXcvLQTqzFvZcwoGLO3TdrWKvfsem5/nO9eJBN1o6npOSv9qivJjDSrP1x0ZR6Gy7TFCIwchZff43Sjabt/BfOS9KSXfYxXVN1UnObRosCbHIENUkNwGM6InyFmCYNUYp8bQsvrwV4QJTK2Mp8Bn4+l8fPiBA6rp0XiTxdMO3MrkhWpC0Y+RoZoehWZzVtPfshEHEN2uvLEkkZmQaB/KHrztllv/1IDfIySqYU0I+xpvm+s28jzhKYIWGXPUKBqub9nUdsvUQadJo2Mxkmb7zlw+Rx7lVjiy9b86cITBArqXmJOBu4yyvZfZ8tE/OIzFaq2NLa3/L2nP92Ic95djqy72jejJrxDI7tF7aCvbfwujfJIxprmcUZEF2JB8wSM6lQRIB5eqqfH+IduLVMWfnawJTdGEUWN80UiTRq9cUfRqX7JwWFQdUXkbSmpKrqqo5IJxsHr98bjC8="
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
