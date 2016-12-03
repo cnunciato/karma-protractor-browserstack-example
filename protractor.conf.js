@@ -25,13 +25,7 @@ var multis = [
   }
 ];
 
-console.log(process.env.BS_USERNAME);
-console.log(process.env.BS_DEBUG);
-console.log(process.env.OTHERTHING);
-
 exports.config = {
-
-
 
   multiCapabilities: _.map(multis, function(o) { 
     return _.merge(_.clone(browserstack), o) 
