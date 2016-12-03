@@ -25,6 +25,8 @@ var multis = [
   }
 ];
 
+console.log(process.env);
+
 exports.config = {
 
   multiCapabilities: _.map(multis, function(o) { 
