@@ -25,7 +25,7 @@ var multis = [
   }
 ];
 
-console.log(process.env.BS_USERNAME);
+console.log(process.env);
 
 exports.config = {
 
